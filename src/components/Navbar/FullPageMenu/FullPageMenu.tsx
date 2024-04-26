@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './FullPageMenu.module.css';
 import { gsap } from 'gsap/gsap-core';
 
@@ -8,27 +8,6 @@ interface Props {
 
 const FullPageMenu = ({ menuOpen }: Props) => {
 	const menuClass = menuOpen ? styles.menuOpen : styles.menu;
-
-	useEffect(() => {
-		if (menuOpen) {
-			const tl = gsap.timeline();
-			tl.fromTo(
-				`.${styles.mainMenuItem}`,
-				{
-					scale: 0.6,
-					x: '100%',
-					opacity: 0,
-				},
-				{
-					duration: 0.6,
-					scale: 1,
-					x: 0,
-					opacity: 1,
-					stagger: 0.2,
-				},
-			);
-		}
-	}, [menuOpen]);
 
 	return (
 		<>
