@@ -1,0 +1,92 @@
+/* Navbar.module.css con clases en camelCase */
+.nav {
+	background-color: var();
+	position: relative;
+	margin: 0 2rem;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+}
+
+.logo {
+	color: #fca4a4;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.1215686275);
+	font-size: 2rem;
+	display: flex;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.logo h2 {
+	font-size: 2.8rem;
+}
+
+.logoThick {
+	font-weight: 800;
+	padding-right: 3px;
+	margin: 0.5rem 0 0 0;
+}
+.logoThin {
+	font-weight: 300;
+	margin-top: 0.5rem;
+}
+
+.navList {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	display: none;
+}
+
+.navItem {
+	padding: 0.5rem 2rem;
+}
+
+.navItem > a {
+	color: var(--color-lightest-grey);
+	font-weight: 400;
+	transition: all 1s ease;
+	text-decoration: none;
+	padding: 1rem;
+}
+.navItem > a:hover {
+	color: var(--color-white);
+	background-color: rgba(255, 255, 0, 0.158);
+	font-weight: 500;
+	border-bottom: 2px solid yellow;
+}
+
+@media screen and (min-width: 1029px) {
+	.navbarLogoThick {
+		font-weight: 700;
+		padding-right: 3px;
+		margin: 2rem 0 5rem 0rem;
+	}
+	.navbarLogoThin {
+		font-weight: 300;
+		margin-top: 2rem;
+		margin-bottom: 5rem;
+	}
+
+	.navbarLogo h2 {
+		font-size: 4.3rem;
+	}
+
+	.navList {
+		margin-top: 1rem;
+		width: auto;
+		display: flex;
+		font-size: 1.6rem;
+		max-height: 100%;
+		opacity: 1;
+	}
+
+	.navItem {
+		border: 0;
+	}
+}
