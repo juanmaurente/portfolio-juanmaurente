@@ -6,6 +6,7 @@ interface Props {
 	menuOpen: boolean;
 }
 
+
 const FullPageMenu = ({ menuOpen }: Props) => {
 	const menuClass = menuOpen ? styles.menuOpen : styles.menu;
 

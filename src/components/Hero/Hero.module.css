@@ -1,0 +1,96 @@
+/* CSS en CamelCase */
+.heroContainer {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgb(48, 48, 48);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contentContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.titleContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.h1Container {
+	display: flex;
+	flex-direction: row;
+}
+
+.h1Container > h1 {
+	font-size: 3rem;
+}
+
+.title {
+	margin-right: 15px;
+}
+
+.animationContainer {
+	display: flex;
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+
+.titleDescription {
+	font-size: 1rem;
+	font-weight: 300;
+	margin-top: 5px;
+}
+
+.animation {
+	width: 200px;
+	height: 200px;
+}
+.scrollContainer {
+	font-size: 10px;
+	font-weight: 300;
+	text-align: center;
+}
+.scrollIcon {
+	width: 20px;
+	padding-bottom: 10px;
+}
+
+@media screen and (min-width: 1048px) {
+	.contentContainer {
+		flex-direction: row;
+		justify-content: center;
+		margin-left: 2rem;
+		align-items: center;
+	}
+
+	.titleDescription {
+		border-top: 1px solid white;
+		padding-top: 15px;
+		font-weight: 300;
+	}
+
+	.h1Container > h1 {
+		margin-top: 15px;
+		font-size: 5rem;
+	}
+
+	.animationContainer {
+		margin-left: 5rem;
+	}
+
+	.animation {
+		width: 500px;
+		height: 500px;
+	}
+}

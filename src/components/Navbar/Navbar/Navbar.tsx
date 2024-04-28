@@ -31,7 +31,9 @@ const Navbar = () => {
 	return (
 		<>
 			<div>
-				<div ref={boxRef} className={styles.nav}>
+				<div
+					ref={boxRef}
+					className={`${styles.nav} ${styles.container}`}>
 					<div className={styles.logo}>
 						<h2 className={styles.logoThick}>Juan</h2>
 						<h2 className={styles.logoThin}>Maurente</h2>
