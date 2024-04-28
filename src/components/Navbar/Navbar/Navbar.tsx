@@ -30,33 +30,30 @@ const Navbar = () => {
 
 	return (
 		<>
-			<div>
-				<div
-					ref={boxRef}
-					className={`${styles.nav} ${styles.container}`}>
-					<div className={styles.logo}>
-						<h2 className={styles.logoThick}>Juan</h2>
-						<h2 className={styles.logoThin}>Maurente</h2>
-					</div>
-
-					<Hamburguer menuOpen={menuOpen} toggleMenu={toggleMenu} />
-
-					<ul className={styles.navList}>
-						<li className={styles.navItem}>
-							<a href='#'>Home</a>
-						</li>
-						<li className={styles.navItem}>
-							<a href='#'>About</a>
-						</li>
-						<li className={styles.navItem}>
-							<a href='#'>Projects</a>
-						</li>
-						<li className={styles.navItem}>
-							<a href='#'>Contact</a>
-						</li>
-					</ul>
+			<div ref={boxRef} className={`${styles.nav} ${styles.container}`}>
+				<div className={styles.logo}>
+					<h2 className={styles.logoThick}>Juan</h2>
+					<h2 className={styles.logoThin}>Maurente</h2>
 				</div>
+
+				<Hamburguer menuOpen={menuOpen} toggleMenu={toggleMenu} />
+
+				<ul className={styles.navList}>
+					<li className={styles.navItem}>
+						<a href='#'>Home</a>
+					</li>
+					<li className={styles.navItem}>
+						<a href='#'>About</a>
+					</li>
+					<li className={styles.navItem}>
+						<a href='#'>Projects</a>
+					</li>
+					<li className={styles.navItem}>
+						<a href='#'>Contact</a>
+					</li>
+				</ul>
 			</div>
+
 			<FullPageMenu menuOpen={menuOpen} />
 		</>
 	);

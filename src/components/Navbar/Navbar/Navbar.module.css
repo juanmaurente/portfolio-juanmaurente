@@ -1,14 +1,12 @@
 /* Navbar.module.css con clases en camelCase */
 .nav {
-	background-color: var();
-	position: relative;
 	margin: 0 2rem;
 	z-index: 2;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
-
+	flex-wrap: nowrap;
+	height: 8vh;
 }
 
 .logo {
