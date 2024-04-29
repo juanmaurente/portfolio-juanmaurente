@@ -48,6 +48,8 @@
 	font-size: 1rem;
 	font-weight: 300;
 	margin-top: 5px;
+	border-top: 1px solid white;
+	padding-top: 15px;
 }
 
 .animation {
@@ -71,18 +73,16 @@
 
 	.contentContainer {
 		flex-direction: row;
-		justify-content: center;
 		margin-left: 2rem;
 		align-items: center;
 	}
 
-	.titleContainer {
-		align-items: center;
-	}
 	.titleDescription {
-		border-top: 1px solid white;
-		padding-top: 15px;
 		font-weight: 300;
+	}
+
+	.titleContainer {
+		align-items: start;
 	}
 
 	.h1Container > h1 {
