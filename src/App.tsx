@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import WelcomeAnimation from './components/AnimationWelcome/AnimationWelcome';
+import Projects from './components/Projects/Projects';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -27,6 +28,7 @@ function App() {
 						<Navbar />
 						<Hero />
 						<About />
+						<Projects />
 					</div>
 				)}
 			</div>
