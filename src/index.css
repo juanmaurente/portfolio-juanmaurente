@@ -1,27 +1,7 @@
 :root {
 	font-family: 'Exo', Arial, sans-serif;
 	line-height: 1.5;
-	font-weight: 400;
-
-
-	--color-danger:
-	--color-primary: #1d4ed8;
-	--color-secondary: #60a5fa;
-	--color-banner: #232637;
-	--color-navbar: #10102c;
-	--color-background: #080816;
-	--color-success: #00ca23;
-	--color-alert: #db950d;
-	--color-danger: #dc2626;
-	--color-white: #ffffff;
-	--color-lightest-grey: #d9d9d9;
-	--color-ligther-grey: #ababab;
-	--color-mid-grey: #808080;
-	--color-darker-grey: #454545;
-	--color-darkest-grey: #222222;
-	--color-black: #000000;
-	--color-red: #fca4a4;
-
+	font-weight: 300;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -35,13 +15,14 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-size: 16px;
-	
 }
 
 a {
+	font-family: 'Exo', Arial, sans-serif;
 	font-weight: 500;
 	color: #646cff;
 	text-decoration: inherit;
+	transition: all ease 0.3s;
 }
 a:hover {
 	color: #535bf2;
@@ -52,7 +33,6 @@ body {
 	min-height: 100vh;
 	background-color: #000000;
 	color: #d9d9d9;
-
 }
 
 h1 {

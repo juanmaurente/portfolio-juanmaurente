@@ -1,0 +1,32 @@
+.contactButton {
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+	border-bottom: 2px solid green;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contactButton a {
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 1.6rem;
+	letter-spacing: 2.29px;
+	line-height: 2.6rem;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.contactButton a:hover {
+	cursor: pointer;
+	color: green;
+}
+
+.animationContainer {
+	width: 1.6rem;
+	height: 1.6rem;
+	margin-left: 10px;
+	margin-bottom: 4px;
+}
