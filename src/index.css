@@ -46,6 +46,12 @@ h1 {
 	padding: 0 3rem;
 }
 
+.sectionHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 .sectionHeader h2 {
 	margin-left: 2rem;
 	font-size: 2.4rem;

@@ -49,7 +49,7 @@ const Hero = () => {
 						<h1 className={styles.title}>Juan.</h1>
 					</div>
 					<h2 className={styles.titleDescription}>
-						Software Developer | Software Tester | Sydney
+						Software Developer | Sydney
 					</h2>
 				</div>
 				<div className={styles.animationContainer}>

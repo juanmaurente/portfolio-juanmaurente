@@ -4,7 +4,7 @@ import ContactButton from '../ContactButton/ContactButton';
 
 const About = () => {
 	return (
-		<section className={styles.about}>
+		<section className={`${styles.about}`}>
 			<div className={styles.aboutText}>
 				<p>
 					👋 Hola! I'm Juan, a Junior Full-Stack Developer based in
@@ -47,7 +47,6 @@ const About = () => {
 					amazing together!
 				</p>
 			</div>
-			<ContactButton />
 		</section>
 	);
 };
