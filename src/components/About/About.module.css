@@ -27,7 +27,9 @@
 }
 
 .skillsItem span {
-	color: #7851a9;
+	color: white;
+	font-weight: 500;
+	text-decoration: underline;
 }
 
 @media (min-width: 768px) {

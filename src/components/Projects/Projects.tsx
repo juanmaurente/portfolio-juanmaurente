@@ -4,7 +4,7 @@ import styles from './Projects.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import { db, getProjects, Project } from '../services/firebase';
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 const Projects = () => {
 	const [projects, setProjects] = useState<Project[]>([]);

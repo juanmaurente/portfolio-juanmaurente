@@ -1,0 +1,72 @@
+/* Estilos base para el contenedor de proyectos */
+.projectsContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid var(--color-white);
+	padding: 4rem 0 8rem 0;
+}
+
+.projectsHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8rem 0 4rem 0;
+}
+
+.projectsHeader h2 {
+	margin: 0;
+}
+
+/* Estilos para cada tarjeta de proyecto */
+.projectItem {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 9rem;
+}
+
+.projectImage {
+	max-width: 45rem;
+	margin-bottom: 2.4rem;
+}
+
+.projectImage img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.projectTitle h3 {
+	font-size: 2.4rem;
+	line-height: 3.2rem;
+	letter-spacing: 1.4px;
+	color: var(--color-white);
+	margin: 0;
+	font-weight: 700;
+}
+
+.projectButtons {
+	display: flex;
+}
+
+.projectButtons .cardButton {
+	margin-right: 3rem;
+}
+
+/* Responsive Grid Layout para pantallas más grandes */
+@media (min-width: 768px) {
+	.projectsContainer {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 2rem;
+	}
+}
+
+@media (min-width: 1440px) {
+	.projectImage {
+		max-width: 540px;
+	}
+}

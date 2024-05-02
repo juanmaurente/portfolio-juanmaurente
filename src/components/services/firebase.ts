@@ -11,7 +11,11 @@ import { Key } from 'react';
 
 export interface Project {
 	id: Key | null | undefined;
-	name: string;
+	title: string;
+	githubRepo: string;
+	skills: string[];
+	siteLink: string;
+	imgLink: string;
 }
 
 // TODO: Replace the following with your app's Firebase project configuration
