@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ContactButton from '../ContactButton/ContactButton';
+import ContactButton from '../Buttons/ContactButton/ContactButton';
 import styles from './Projects.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt } from '@fortawesome/free-brands-svg-icons';

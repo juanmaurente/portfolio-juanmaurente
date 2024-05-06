@@ -5,7 +5,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border-top: 1px solid var(--color-white);
 	padding: 4rem 0 8rem 0;
 }
 
@@ -42,13 +41,15 @@
 	font-size: 2.4rem;
 	line-height: 3.2rem;
 	letter-spacing: 1.4px;
-	color: var(--color-white);
+	color: red;
 	margin: 0;
 	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .projectButtons {
 	display: flex;
+	flex-direction: row;
 }
 
 .projectButtons .cardButton {
@@ -60,7 +61,7 @@
 	.projectsContainer {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 		gap: 2rem;
 	}
 }

@@ -6,6 +6,7 @@ import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import WelcomeAnimation from './components/AnimationWelcome/AnimationWelcome';
 import Projects from './components/Projects/Projects';
+import ContactForm from './components/ContactFrom/ContactForm';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -24,12 +25,17 @@ function App() {
 				{loading ? (
 					<WelcomeAnimation />
 				) : (
-					<div className='container'>
-						<Navbar />
-						<Hero />
-						<About />
-						<Projects />
-					</div>
+					<>
+						<div className='container'>
+							<Navbar />
+							<Hero />
+							<About />
+							<Projects />
+						</div>
+						<div>
+							<ContactForm />
+						</div>
+					</>
 				)}
 			</div>
 		</>

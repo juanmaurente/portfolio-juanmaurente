@@ -1,6 +1,7 @@
 import React from 'react';
 import { Project } from '../services/firebase';
 import styles from './ProjectCard.module.css';
+import ActionButton from '../Buttons/ActionButton/ActionButton';
 
 interface Props {
 	project: Project;
@@ -31,13 +32,15 @@ const ProjectCard = ({ project }: Props) => {
 				</p>
 			</div> */}
 
-			<div className='projectButtons'>
-				<button className='cardButton'>
+			<div className={styles.projectButtons}>
+				<ActionButton textOfButton='VIEW PROJECT' />
+				{/* <button className='cardButton'>
 					<a href={project.siteLink}>VIEW PROJECT</a>
-				</button>
-				<button className='cardButton'>
+				</button> */}
+				<ActionButton textOfButton='VIEW CODE' />
+				{/* <button className='cardButton'>
 					<a href={project.githubRepo}>VIEW CODE</a>
-				</button>
+				</button> */}
 			</div>
 		</div>
 	);

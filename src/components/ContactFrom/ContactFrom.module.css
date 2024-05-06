@@ -1,0 +1,99 @@
+/* Contact */
+.contactContainer {
+	background-color: rgba(116, 115, 115, 0.192);
+	display: block;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 5rem;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 5rem 3rem 0 3rem;
+	height: 70rem;
+}
+
+.contactHeader {
+	display: block;
+}
+
+.contactHeader h2 {
+	margin: 0;
+}
+
+.contactContainer p {
+	color: gray;
+	font-size: 1.6rem;
+	line-height: 2.6rem;
+}
+
+form {
+	padding-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 9rem;
+}
+
+form input,
+textarea {
+	border: 0;
+	background-color: rgba(116, 115, 115, 0);
+	padding-bottom: 1.6rem;
+	padding-left: 2.4rem;
+	margin-bottom: 3.4rem;
+	border-bottom: 1px solid grey;
+	transition: transform 0.3s ease, padding 0.3s ease;
+}
+
+form input:focus,
+textarea:focus {
+	color: white;
+	padding: 2rem;
+	transform: scale(1.02);
+	background-color: rgba(116, 115, 115, 0.103);
+}
+
+textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.contactButton {
+	align-self: flex-end;
+}
+
+.footer {
+	height: 30rem;
+}
+
+/* @media (min-width: 768px) {
+	.contactContainer {
+		border-bottom: 1px solid gray;
+	}
+
+	form {
+		border: 0;
+	}
+}
+
+@media (min-width: 1440px) {
+	.contactContainer {
+		display: grid;
+		grid-template-columns: repeat(2, 45rem);
+		grid-gap: 22rem;
+		align-items: start;
+		padding-top: 5rem;
+		text-align: left;
+	}
+
+	.contactHeader {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+	}
+
+	form {
+		padding-top: 0;
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 1;
+		border: 0;
+	}
+} */
