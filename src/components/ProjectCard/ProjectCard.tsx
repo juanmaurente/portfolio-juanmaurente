@@ -1,11 +1,35 @@
-import React from 'react';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { Project } from '../services/firebase';
 import styles from './ProjectCard.module.css';
 import ActionButton from '../Buttons/ActionButton/ActionButton';
+import {
+	faAws,
+	faCss3Alt,
+	faGithub,
+	faHtml5,
+	faJs,
+	faReact,
+	faSass,
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+interface SkillIconMap {
+	[key: string]: IconDefinition;
+}
 
 interface Props {
 	project: Project;
 }
+
+const skillIconMap: SkillIconMap = {
+	HTML: faHtml5,
+	CSS: faCss3Alt,
+	JAVASCRIPT: faJs,
+	REACT: faReact,
+	GITHUB: faGithub,
+	AWS: faAws,
+	SASS: faSass,
+};
 
 const ProjectCard = ({ project }: Props) => {
 	return (
@@ -20,27 +44,27 @@ const ProjectCard = ({ project }: Props) => {
 					<img src={project.imgLink} alt='' />
 				</picture>
 			</div>
-			<div className='projectTitle'>
+			<div className={styles.projectTitle}>
 				<h3>{project.title}</h3>
 			</div>
-			{/* <div className='projectSkills'>
-				<p>
-					HTML <i className='fa-brands fa-html5'></i>
-				</p>
-				<p>
-					CSS <i className='fa-brands fa-css3-alt'></i>
-				</p>
-			</div> */}
-
+			<div className={styles.projectSkills}>
+				{project.skills.map((skill) => {
+					const icon = skillIconMap[skill];
+					return (
+						icon && (
+							<FontAwesomeIcon
+								icon={icon}
+								size='lg'
+								className={styles.skillIcon}
+							/>
+						)
+					);
+				})}
+			</div>
 			<div className={styles.projectButtons}>
 				<ActionButton textOfButton='VIEW PROJECT' />
-				{/* <button className='cardButton'>
-					<a href={project.siteLink}>VIEW PROJECT</a>
-				</button> */}
+
 				<ActionButton textOfButton='VIEW CODE' />
-				{/* <button className='cardButton'>
-					<a href={project.githubRepo}>VIEW CODE</a>
-				</button> */}
 			</div>
 		</div>
 	);
