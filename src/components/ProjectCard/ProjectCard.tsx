@@ -1,3 +1,5 @@
+// ProjectCard component
+import React from 'react';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { Project } from '../services/firebase';
 import styles from './ProjectCard.module.css';
@@ -24,9 +26,9 @@ interface Props {
 const skillIconMap: SkillIconMap = {
 	HTML: faHtml5,
 	CSS: faCss3Alt,
-	JAVASCRIPT: faJs,
-	REACT: faReact,
-	GITHUB: faGithub,
+	JavaScript: faJs,
+	React: faReact,
+	Github: faGithub,
 	AWS: faAws,
 	SASS: faSass,
 };
@@ -40,19 +42,19 @@ const ProjectCard = ({ project }: Props) => {
 						media='(min-width: 1440px)'
 						srcSet={project.imgLink}
 					/>
-
-					<img src={project.imgLink} alt='' />
+					<img src={project.imgLink} alt={project.title} />
 				</picture>
 			</div>
 			<div className={styles.projectTitle}>
 				<h3>{project.title}</h3>
 			</div>
 			<div className={styles.projectSkills}>
-				{project.skills.map((skill) => {
-					const icon = skillIconMap[skill];
+				{project.skills.map((skill, index) => {
+					const icon = skillIconMap[skill.toUpperCase()];
 					return (
 						icon && (
 							<FontAwesomeIcon
+								key={index}
 								icon={icon}
 								size='lg'
 								className={styles.skillIcon}
@@ -62,9 +64,14 @@ const ProjectCard = ({ project }: Props) => {
 				})}
 			</div>
 			<div className={styles.projectButtons}>
-				<ActionButton textOfButton='VIEW PROJECT' />
-
-				<ActionButton textOfButton='VIEW CODE' />
+				<ActionButton
+					textOfButton='VIEW PROJECT'
+					href={project.siteLink}
+				/>
+				<ActionButton
+					textOfButton='VIEW CODE'
+					href={project.githubRepo}
+				/>
 			</div>
 		</div>
 	);
