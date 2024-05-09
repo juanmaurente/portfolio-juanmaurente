@@ -40,7 +40,7 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<div className={styles.heroContainer}>
+		<div id='home' className={styles.heroContainer}>
 			<div className={`${styles.contentContainer}`}>
 				<div className={styles.titleContainer}>
 					<div className={styles.h1Container}>

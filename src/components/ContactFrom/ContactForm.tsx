@@ -22,7 +22,7 @@ const ContactForm = () => {
 
 	return (
 		<>
-			<div className={styles.contactContainer}>
+			<div id='contact' className={styles.contactContainer}>
 				<div className={`sectionHeader ${styles.contactHeader}`}>
 					<h2>Contact</h2>
 					<p>

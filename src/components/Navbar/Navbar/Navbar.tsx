@@ -3,6 +3,7 @@ import styles from './Navbar.module.css';
 import Hamburguer from '../Hamburguer/Hamburguer';
 import FullPageMenu from '../FullPageMenu/FullPageMenu';
 import { gsap } from 'gsap/gsap-core';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -40,16 +41,16 @@ const Navbar = () => {
 
 				<ul className={styles.navList}>
 					<li className={styles.navItem}>
-						<a href='#'>Home</a>
+						<Link to='/home'>Home</Link>
 					</li>
 					<li className={styles.navItem}>
-						<a href='#'>About</a>
+						<Link to='/about'>About</Link>
 					</li>
 					<li className={styles.navItem}>
-						<a href='#'>Projects</a>
+						<Link to='/projects'>Projects</Link>
 					</li>
 					<li className={styles.navItem}>
-						<a href='#'>Contact</a>
+						<Link to='/contact'>Contact</Link>
 					</li>
 				</ul>
 			</div>

@@ -18,7 +18,7 @@ const Projects = () => {
 		fetchProjects();
 	}, []);
 	return (
-		<div>
+		<div id='projects'>
 			<div className='sectionHeader'>
 				<h2>Projects</h2>
 				<ContactButton />
