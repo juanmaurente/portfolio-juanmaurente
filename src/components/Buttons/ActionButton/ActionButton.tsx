@@ -3,16 +3,15 @@ import styles from './ActionButton.module.css';
 
 interface Props {
 	textOfButton: string;
+	onClick?: () => void;
 }
 
-const ContactButton = ({ textOfButton }: Props) => {
+const ActionButton = ({ textOfButton, onClick }: Props) => {
 	return (
-		<button className={styles.actionButton}>
-			<a href='#' className={styles.actionLink}>
-				{textOfButton}
-			</a>
+		<button type='submit' className={styles.actionButton} onClick={onClick}>
+			{textOfButton}
 		</button>
 	);
 };
 
-export default ContactButton;
+export default ActionButton;

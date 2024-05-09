@@ -52,10 +52,6 @@
 	flex-direction: row;
 }
 
-.projectButtons .cardButton {
-	margin-right: 3rem;
-}
-
 /* Responsive Grid Layout para pantallas más grandes */
 @media (min-width: 768px) {
 	.projectsContainer {

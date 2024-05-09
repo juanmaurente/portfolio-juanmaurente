@@ -1,8 +1,25 @@
 import React from 'react';
 import styles from './ContactFrom.module.css';
 import ActionButton from '../Buttons/ActionButton/ActionButton';
+import { useForm } from 'react-hook-form';
+
+interface FormData {
+	name: string;
+	email: string;
+	message: string;
+}
 
 const ContactForm = () => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<FormData>();
+
+	const onSubmit = (data: any) => {
+		console.log(data);
+	};
+
 	return (
 		<>
 			<div className={styles.contactContainer}>
@@ -14,27 +31,35 @@ const ContactForm = () => {
 						as soon as possible.
 					</p>
 				</div>
-				<form action=''>
+				<form onSubmit={handleSubmit(onSubmit)}>
 					<input
-						type='text'
-						name='name'
-						id='name'
-						placeholder='NAME'
+						{...register('name', { required: 'Name is required' })}
+						placeholder='Your Name'
 						className={styles.input}
 					/>
+					{errors.name && <p>Name is required.</p>}
+
 					<input
-						type='email'
-						name='email'
-						id='email'
-						placeholder='EMAIL'
+						{...register('email', {
+							required: 'Email is required',
+							pattern: {
+								value: /^\S+@\S+\.\S+$/,
+								message: 'Please enter a valid email',
+							},
+						})}
+						placeholder='Your Email'
 						className={styles.input}
 					/>
+					{errors.email && <p>{errors.email.message}</p>}
+
 					<textarea
-						name='message'
-						id='message'
-						rows='3'
-						placeholder='MESSAGE'
+						{...register('message', {
+							required: 'Message is required',
+						})}
+						placeholder='Your Message'
 						className={styles.textarea}></textarea>
+					{errors.message && <p>{errors.message.message}</p>}
+
 					<ActionButton textOfButton='SEND MESSAGE' />
 				</form>
 			</div>

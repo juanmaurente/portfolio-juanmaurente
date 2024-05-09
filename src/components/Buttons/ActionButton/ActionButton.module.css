@@ -1,25 +1,22 @@
 .actionButton {
 	background-color: rgba(0, 0, 0, 0);
 	border: 0;
-	padding: 0.5rem;
-	display: flex;
+	padding: 0;
+	display: inline-block;
 	justify-content: center;
 	align-items: center;
-}
-
-.actionButton a {
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 1.2rem;
 	letter-spacing: 2.29px;
 	line-height: 2.6rem;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
 	border-bottom: 2px solid green;
+	margin-right: 3rem;
+	transition: all 0.3s ease;
+	white-space: nowrap;
 }
 
-.actionButton a:hover {
+.actionButton:hover {
 	cursor: pointer;
 	color: green;
 }
