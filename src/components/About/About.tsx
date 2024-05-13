@@ -1,47 +1,78 @@
 import styles from './About.module.css';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import {
+	faAws,
+	faCss3Alt,
+	faGithub,
+	faGoogle,
+	faHtml5,
+	faJs,
+	faReact,
+	faSass,
+	faJava,
+	faWordpress,
+	faWebflow,
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const About = () => {
+const Skills: SkillIconMap = {
+	HTML: faHtml5,
+	CSS: faCss3Alt,
+	JavaScript: faJs,
+	React: faReact,
+	SASS: faSass,
+	Java: faJava,
+	Github: faGithub,
+	WordPress: faWordpress,
+	Webflow: faWebflow,
+	AWS: faAws,
+	Google: faGoogle,
+};
+
+interface SkillIconMap {
+	[key: string]: IconDefinition;
+}
+
+interface Props {
+	id: string;
+}
+
+const About = ({ id }: Props) => {
+	const renderSkills = (skillMap: SkillIconMap) => (
+		<div className={styles.skillsGrid}>
+			{Object.entries(skillMap).map(([skill, icon]) => (
+				<div key={skill} className={styles.skill}>
+					<FontAwesomeIcon
+						className={styles.skillIcon}
+						icon={icon}
+						size='3x'
+					/>
+					<span>{skill}</span>
+				</div>
+			))}
+		</div>
+	);
+
 	return (
-		<section id='about' className={`${styles.about}`}>
+		<section id={id} className={styles.about}>
+			<div className='sectionHeader'>
+				<h2>About</h2>
+			</div>
 			<div className={styles.aboutText}>
 				<p>
-					👋 Hola! I'm Juan, a Junior Full-Stack Developer based in
-					Sydney. With a passion for technology and innovation, I have
-					spent the last two years honing my skills in web
-					development. I specialize in creating modern and responsive
-					web applications.
+					👋 Hola! I'm Juan, a Junior{' '}
+					<span className={styles.textHighlited}>
+						Full-Stack Developer
+					</span>{' '}
+					in Sydney, passionate about building{' '}
+					<span className={styles.textHighlited}>
+						modern, clean and responsive
+					</span>{' '}
+					web applications through innovative technology.
 				</p>
-
-				<div className={styles.aboutSkills}>
-					<p>My technical toolkit includes:</p>
-					<ul>
-						<li className={styles.skillsItem}>
-							<span>Frontend Technologies:</span> HTML, CSS,
-							JavaScript, and React.js
-						</li>
-						<li className={styles.skillsItem}>
-							<span>Backend Technologies:</span> Java and Spring
-							Boot
-						</li>
-						<li className={styles.skillsItem}>
-							<span>Web Platforms:</span> Webflow and WordPress
-						</li>
-						<li className={styles.skillsItem}>
-							<span>Cloud Services:</span> Google Cloud Platform
-							(GCP) and Amazon Web Services (AWS)
-						</li>
-					</ul>
-				</div>
-				<p>
-					I am committed to building websites that are also SEO
-					optimized to ensure the best online visibility. I pride
-					myself on my ability to work face-to-face with my clients,
-					ensuring that all their requirements are meticulously met
-					and exceeded. Whether you're looking to build a brand new
-					website or revamp an existing one, I am here to help you
-					navigate the digital landscape with ease and confidence.
-					Let's create something amazing together!
-				</p>
+				<p>Some of the techs I love working with are:</p>
+				{renderSkills(Skills)}
+				<p>Let's create something amazing together!</p>
 			</div>
 		</section>
 	);

@@ -1,0 +1,8 @@
+.animationContainer {
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

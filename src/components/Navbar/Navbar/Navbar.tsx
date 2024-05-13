@@ -1,29 +1,15 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
 import styles from './Navbar.module.css';
 import Hamburguer from '../Hamburguer/Hamburguer';
 import FullPageMenu from '../FullPageMenu/FullPageMenu';
-import { gsap } from 'gsap/gsap-core';
-import { Link } from 'react-router-dom';
+import { useRef, useState } from 'react';
 
-const Navbar = () => {
+interface Props {
+	onNavigate: (sectionId: string) => void;
+}
+
+const Navbar = ({ onNavigate }: Props) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const boxRef = useRef<HTMLDivElement>(null);
-
-	useLayoutEffect(() => {
-		gsap.fromTo(
-			boxRef.current,
-			{
-				y: '-10px',
-				opacity: 0,
-			},
-			{
-				y: 0,
-				opacity: 1,
-				delay: 2.5,
-				duration: 0.5,
-			},
-		);
-	}, []);
 
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen);
@@ -40,17 +26,25 @@ const Navbar = () => {
 				<Hamburguer menuOpen={menuOpen} toggleMenu={toggleMenu} />
 
 				<ul className={styles.navList}>
-					<li className={styles.navItem}>
-						<Link to='/home'>Home</Link>
+					<li
+						className={styles.navItem}
+						onClick={() => onNavigate('home')}>
+						Home
 					</li>
-					<li className={styles.navItem}>
-						<Link to='/about'>About</Link>
+					<li
+						className={styles.navItem}
+						onClick={() => onNavigate('about')}>
+						About
 					</li>
-					<li className={styles.navItem}>
-						<Link to='/projects'>Projects</Link>
+					<li
+						className={styles.navItem}
+						onClick={() => onNavigate('projects')}>
+						Projects
 					</li>
-					<li className={styles.navItem}>
-						<Link to='/contact'>Contact</Link>
+					<li
+						className={styles.navItem}
+						onClick={() => onNavigate('contact')}>
+						Contact
 					</li>
 				</ul>
 			</div>

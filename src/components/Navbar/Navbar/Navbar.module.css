@@ -1,12 +1,16 @@
 /* Navbar.module.css con clases en camelCase */
 .nav {
 	margin: 0 2rem;
-	z-index: 2;
+	z-index: 3;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: nowrap;
 	height: 8vh;
+	position: static;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
 .logo {
@@ -43,17 +47,17 @@
 
 .navItem {
 	padding: 0.5rem 2rem;
-}
-
-.navItem > a {
-	color: var(--color-lightest-grey);
+	cursor: pointer;
+	color: gray;
 	font-weight: 400;
 	transition: all 1s ease;
 	text-decoration: none;
 	padding: 1rem;
+	cursor: pointer;
 }
-.navItem > a:hover {
-	color: var(--color-white);
+
+.navItem:hover {
+	color: white;
 	background-color: rgba(255, 255, 0, 0.158);
 	font-weight: 500;
 	border-bottom: 2px solid yellow;

@@ -1,17 +1,11 @@
 import React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import welcomeAnimation from './animationStart.json';
+import styles from './AnimationWelcome.module.css';
 
 const WelcomeAnimation = () => {
 	return (
-		<div
-			style={{
-				width: '100vw',
-				height: '100vh',
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-			}}>
+		<div className={styles.animationContainer}>
 			<Player
 				autoplay
 				loop

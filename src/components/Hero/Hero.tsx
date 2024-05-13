@@ -4,7 +4,11 @@ import gsap from 'gsap';
 import { Player } from '@lottiefiles/react-lottie-player';
 import animation from './animation.json';
 
-const Hero = () => {
+interface Props {
+	id: string;
+}
+
+const Hero = ({ id }: Props) => {
 	useEffect(() => {
 		const tl = gsap.timeline();
 		tl.set(
@@ -22,13 +26,13 @@ const Hero = () => {
 				x: 0,
 				opacity: 1,
 				textShadow: '0px 0px 1px rgba(233,233,233,0.6)',
-				stagger: 0.5,
+				stagger: 0.3,
 			})
 			.to(
 				`.${styles.animation}, .${styles.titleDescription}, .${styles.scrollContainer}`,
 				{
 					opacity: 1,
-					duration: 1,
+					duration: 0.3,
 				},
 			)
 			.to(`.${styles.scrollIcon}`, {

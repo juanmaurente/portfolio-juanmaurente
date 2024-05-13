@@ -9,7 +9,10 @@ interface FormData {
 	message: string;
 }
 
-const ContactForm = () => {
+interface Props {
+	id: string;
+}
+const ContactForm = ({ id }: Props) => {
 	const {
 		register,
 		handleSubmit,
@@ -22,7 +25,7 @@ const ContactForm = () => {
 
 	return (
 		<>
-			<div id='contact' className={styles.contactContainer}>
+			<div id={id} className={styles.contactContainer}>
 				<div className={`sectionHeader ${styles.contactHeader}`}>
 					<h2>Contact</h2>
 					<p>

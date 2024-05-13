@@ -33,9 +33,12 @@ a:hover {
 }
 
 body {
+	margin: 0 auto;
+	padding: 0 30px;
 	min-width: 320px;
+	max-width: 1600px;
 	min-height: 100vh;
-	background-color: #000000;
+	background-color: rgb(17, 17, 17);
 	color: #d9d9d9;
 }
 
