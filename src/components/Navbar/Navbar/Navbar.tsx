@@ -49,7 +49,11 @@ const Navbar = ({ onNavigate }: Props) => {
 				</ul>
 			</div>
 
-			<FullPageMenu menuOpen={menuOpen} />
+			<FullPageMenu
+				menuOpen={menuOpen}
+				onNavigate={onNavigate}
+				toggleMenu={toggleMenu}
+			/>
 		</>
 	);
 };

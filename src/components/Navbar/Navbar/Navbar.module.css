@@ -1,16 +1,16 @@
-/* Navbar.module.css con clases en camelCase */
 .nav {
-	margin: 0 2rem;
 	z-index: 3;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: nowrap;
-	height: 8vh;
-	position: static;
-	top: 0;
+	height: 100%;
+	position: sticky;
+	top: 0px;
 	left: 0;
 	width: 100%;
+	padding: 0 2rem;
+	background-color: rgba(0, 0, 0, 0.89);
 }
 
 .logo {
@@ -64,6 +64,9 @@
 }
 
 @media screen and (min-width: 1029px) {
+	.nav {
+		background-color: rgba(0, 0, 0, 0.541);
+	}
 	.navbarLogoThick {
 		font-weight: 700;
 		padding-right: 3px;

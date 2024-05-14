@@ -4,29 +4,45 @@ import { gsap } from 'gsap/gsap-core';
 
 interface Props {
 	menuOpen: boolean;
+	onNavigate: (sectionId: string) => void;
+	toggleMenu: () => void;
 }
 
-
-const FullPageMenu = ({ menuOpen }: Props) => {
+const FullPageMenu = ({ menuOpen, onNavigate, toggleMenu }: Props) => {
 	const menuClass = menuOpen ? styles.menuOpen : styles.menu;
+
+	const handleNavigation = (sectionId: string) => {
+		onNavigate(sectionId);
+		toggleMenu();
+	};
 
 	return (
 		<>
 			<section className={menuClass}>
 				<div className={styles.menuInner}>
 					<ul className={styles.mainMenu}>
-						<li className={styles.mainMenuItem}>
-							<a href='#'>Home</a>
-						</li>
-						<li className={styles.mainMenuItem}>
-							<a href='#'>About</a>
-						</li>
-						<li className={styles.mainMenuItem}>
-							<a href='#'>Projects</a>
-						</li>
-						<li className={styles.mainMenuItem}>
-							<a href='#'>Contact</a>
-						</li>
+						<ul className={styles.mainMenu}>
+							<li
+								className={styles.mainMenuItem}
+								onClick={() => handleNavigation('home')}>
+								Home
+							</li>
+							<li
+								className={styles.mainMenuItem}
+								onClick={() => handleNavigation('about')}>
+								About
+							</li>
+							<li
+								className={styles.mainMenuItem}
+								onClick={() => handleNavigation('projects')}>
+								Projects
+							</li>
+							<li
+								className={styles.mainMenuItem}
+								onClick={() => handleNavigation('contact')}>
+								Contact
+							</li>
+						</ul>
 					</ul>
 				</div>
 			</section>
