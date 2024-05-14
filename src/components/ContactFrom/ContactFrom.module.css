@@ -32,12 +32,10 @@ textarea {
 	font-family: 'Exo', Arial, sans-serif;
 	border: 0;
 	background-color: rgba(116, 115, 115, 0.1);
-	padding-bottom: 1.6rem;
-	padding-left: 2.4rem;
+	padding: 1.6rem;
 	margin-bottom: 3.4rem;
 	border-bottom: 1px solid grey;
 	transition: transform 0.3s ease, padding 0.3s ease;
-	display: flex;
 }
 
 form input:focus,
@@ -46,6 +44,10 @@ textarea:focus {
 	padding: 2rem;
 	transform: scale(1.02);
 	background-color: rgba(116, 115, 115, 0.103);
+}
+
+textarea::placeholder {
+	line-height: inherit;
 }
 
 textarea {
@@ -58,12 +60,12 @@ textarea {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: start;
-		max-width: 1600px; /* Maximum width as per your requirement */
+		max-width: 1600px;
 	}
 }
 
 .contactHeader {
-	max-width: 45rem; /* Restricts the header width */
+	max-width: 45rem;
 	display: flex;
 	flex-direction: column;
 	justify-self: left;
