@@ -12,12 +12,17 @@ const Projects = ({ id }: Props) => {
 
 	useEffect(() => {
 		const fetchProjects = async () => {
-			const fetchProjects = await getProjects(db); // Usa la función getProjects importada o definida
-			setProjects(fetchProjects);
+			try {
+				const fetchedProjects = await getProjects(db);
+				setProjects(fetchedProjects);
+			} catch (error) {
+				console.error('Error fetching projects:', error);
+			}
 		};
 
 		fetchProjects();
 	}, []);
+
 	return (
 		<div id={id}>
 			<div className='sectionHeader'>
