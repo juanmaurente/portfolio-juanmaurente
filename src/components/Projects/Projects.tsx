@@ -42,7 +42,7 @@ const Projects = ({ id }: Props) => {
 					trigger: '.projectCard',
 					start: 'top 80%',
 					end: 'top 100px',
-					markers: true,
+					markers: false,
 				},
 				stagger: 0.5,
 				duration: 1,
