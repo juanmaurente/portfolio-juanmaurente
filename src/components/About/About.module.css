@@ -5,26 +5,25 @@
 	justify-content: center;
 	align-items: center;
 	margin: 7rem 0;
-	background-color: rgba(116, 115, 115, 0.192);
+	background-color: rgba(116, 115, 115, 0.055);
 	padding: 5rem 0;
 }
 
 .aboutText p {
 	padding: 2rem;
-	font-size: 1.6rem;
-	font-weight: 500;
-	line-height: 3.5rem;
+	font-size: 1.2rem;
+	font-weight: 300;
+	line-height: 2.2rem;
 	text-align: left;
 	width: 100%;
 }
 
 .aboutText .textHighlited {
 	font-family: 'Exo', Arial, sans-serif;
-	font-weight: 800;
+	font-weight: 500;
 	color: #fca4a4;
-	font-size: 1.6rem;
-	text-decoration: underline;
-	text-shadow: 0px 2px 40px rgba(233, 233, 233, 0.452);
+	font-size: 1.2rem;
+	text-shadow: 0px 2px 10px rgba(233, 233, 233, 0.452);
 }
 
 .skillsGrid {

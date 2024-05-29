@@ -1,6 +1,6 @@
 /* Contact Container */
 .contactContainer {
-	background-color: rgba(116, 115, 115, 0.1);
+	background-color: rgba(116, 115, 115, 0.055);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

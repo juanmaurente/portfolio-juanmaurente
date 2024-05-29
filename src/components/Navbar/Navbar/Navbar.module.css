@@ -10,7 +10,7 @@
 	left: 0;
 	width: 100%;
 	padding: 0 2rem;
-	background-color: rgba(0, 0, 0, 0.89);
+	background-color: rgba(0, 0, 0, 0.192);
 }
 
 .logo {
@@ -34,6 +34,7 @@
 	margin: 0.5rem 0 0 0;
 }
 .logoThin {
+	color: rgb(255, 255, 255);
 	font-weight: 300;
 	margin-top: 0.5rem;
 }
@@ -65,7 +66,7 @@
 
 @media screen and (min-width: 1029px) {
 	.nav {
-		background-color: rgba(0, 0, 0, 0.541);
+		background-color: rgba(0, 0, 0, 0.13);
 	}
 	.navbarLogoThick {
 		font-weight: 700;

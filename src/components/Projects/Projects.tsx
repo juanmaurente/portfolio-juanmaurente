@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import ContactButton from '../Buttons/ContactButton/ContactButton';
 import styles from './Projects.module.css';
 import { db, getProjects, Project } from '../services/firebase';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 interface Props {
 	id: string;
@@ -10,7 +13,7 @@ interface Props {
 const Projects = ({ id }: Props) => {
 	const [projects, setProjects] = useState<Project[]>([]);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const fetchProjects = async () => {
 			try {
 				const fetchedProjects = await getProjects(db);
@@ -23,6 +26,30 @@ const Projects = ({ id }: Props) => {
 		fetchProjects();
 	}, []);
 
+	useLayoutEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		gsap.fromTo(
+			'.projectCard',
+			{
+				opacity: 0,
+				x: -50,
+			},
+			{
+				opacity: 1,
+				x: 0,
+				scrollTrigger: {
+					trigger: '.projectCard',
+					start: 'top 80%',
+					end: 'top 100px',
+					markers: true,
+				},
+				stagger: 0.5,
+				duration: 1,
+			},
+		);
+	}, [projects]); // Ensure this effect runs again when 'projects' state changes
+
 	return (
 		<div id={id}>
 			<div className='sectionHeader'>
@@ -31,7 +58,9 @@ const Projects = ({ id }: Props) => {
 			</div>
 			<div className={styles.projectsContainer}>
 				{projects.map((project) => (
-					<ProjectCard project={project} />
+					<div className='projectCard'>
+						<ProjectCard project={project} />
+					</div>
 				))}
 			</div>
 		</div>

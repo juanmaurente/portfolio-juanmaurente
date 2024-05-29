@@ -14,6 +14,8 @@ import {
 	faWebflow,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Skills: SkillIconMap = {
 	HTML: faHtml5,
@@ -53,8 +55,26 @@ const About = ({ id }: Props) => {
 		</div>
 	);
 
+	gsap.registerPlugin(useGSAP);
+
+	useGSAP(() => {
+		// gsap code here...
+
+		gsap.from('.aboutContainer', {
+			scrollTrigger: {
+				trigger: '.aboutContainer',
+				start: 'top 60%',
+				end: 'top 100px',
+				markers: false,
+			},
+			y: -20,
+			duration: 2,
+			opacity: 0,
+		});
+	});
+
 	return (
-		<section id={id} className={styles.about}>
+		<section id={id} className={`aboutContainer ${styles.about}`}>
 			<div className='sectionHeader'>
 				<h2>About</h2>
 			</div>

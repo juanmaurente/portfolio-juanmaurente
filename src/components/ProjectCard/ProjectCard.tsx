@@ -8,10 +8,14 @@ import {
 	faAws,
 	faCss3Alt,
 	faGithub,
+	faGoogle,
 	faHtml5,
 	faJs,
 	faReact,
 	faSass,
+	faJava,
+	faWordpress,
+	faWebflow,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -26,16 +30,20 @@ interface Props {
 const skillIconMap: SkillIconMap = {
 	HTML: faHtml5,
 	CSS: faCss3Alt,
-	JavaScript: faJs,
-	React: faReact,
-	Github: faGithub,
-	AWS: faAws,
+	JAVASCRIPT: faJs,
+	REACT: faReact,
 	SASS: faSass,
+	JAVA: faJava,
+	GITHUB: faGithub,
+	WORDPRESS: faWordpress,
+	Webflow: faWebflow,
+	AWS: faAws,
+	GOOGLE: faGoogle,
 };
 
 const ProjectCard = ({ project }: Props) => {
 	return (
-		<div className={styles.projectItem}>
+		<div className={`projectItem ${styles.projectItem}`}>
 			<div className={styles.projectImage}>
 				<picture>
 					<source
