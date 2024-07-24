@@ -1,8 +1,21 @@
 .animationContainer {
 	position: absolute;
-	top: 40%;
-	left: 40%;
 	display: flex;
+	width: 90vw;
+	height: 100vh;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
+}
+
+@media (min-width: 768px) {
+	.animationContainer {
+		position: absolute;
+		width: 90vw;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
 }
