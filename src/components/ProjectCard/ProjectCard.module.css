@@ -25,7 +25,6 @@
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 2rem;
-	padding: 15px;
 	background-color: rgba(116, 115, 115, 0.007);
 	transition: all ease 0.3s;
 }
@@ -75,6 +74,10 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		gap: 2rem;
+	}
+
+	.projectItem {
+		padding: 15px;
 	}
 }
 
