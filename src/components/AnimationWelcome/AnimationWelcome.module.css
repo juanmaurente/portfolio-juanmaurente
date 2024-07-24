@@ -1,7 +1,7 @@
 .animationContainer {
 	position: absolute;
 	display: flex;
-	width: 90vw;
+	width: 98vw;
 	height: 100vh;
 	align-items: center;
 	justify-content: center;
@@ -11,7 +11,8 @@
 @media (min-width: 768px) {
 	.animationContainer {
 		position: absolute;
-		width: 90vw;
+		left: 1%;
+		width: 99vw;
 		height: 100vh;
 		display: flex;
 		align-items: center;

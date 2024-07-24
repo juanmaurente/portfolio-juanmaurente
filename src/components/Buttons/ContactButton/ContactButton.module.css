@@ -11,7 +11,8 @@
 .contactButton a {
 	text-transform: uppercase;
 	color: #fff;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
+	text-wrap: nowrap;
 	letter-spacing: 2.29px;
 	line-height: 2.6rem;
 	display: flex;
